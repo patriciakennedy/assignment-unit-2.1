@@ -7,7 +7,7 @@ let lastName = 'Kennedy';
 //     (remember, you already have variables for this, can you use those?)
 //     Console log the value of `fullName`
 let fullName = firstName + " " + lastName;
-console.log('fullName');
+console.log(fullName);
 // 4 - Create a variable called `luckyNumber` and assign it the value of your lucky number.
 //     Console log the value of `luckyNumber`
 let luckyNumber = 11;
@@ -31,31 +31,63 @@ console.log(food);
 //     Console log the value of `pets`
 let pets = 2;
 console.log(pets);
+
 // 9 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
-let friendsPets = 5;
+let friendsPets = 1;
+
 // 10 - Add two pets to your `pets` variable
+pets += 2;
 
 // 11 - Create a constant variable called `allowedPets` and set it to a number value of your choice
+const allowedPets = 5;
 
 // 12 - Create a variable called `result`. Create a conditional:
 //      if adventurous is true, set `result` to be "Adventures are great!", 
 //      if it's not true,  set `result` to be "How about we stay home?"
 //      Console log the value of `result`
+let result;
+if (adventurous === true){
+  result = "Adventures are great!";
+}else {
+  result = "How about we stay home?";
+}
+console.log(result);
+
 
 // 13 - Create a variable called `diceRoll` and set it to the value of "Try again later.".
 //      Create a compound conditional: 
 //      if luckyNumber is 2 and adventurous is true,
 //      set `diceRoll` to be "Roll the dice!"
 //      Console log the value of `diceRoll`
+let diceRoll = "Try again later.";
+
+if (luckyNumber === 2 && adventurous){
+  diceRoll = "Roll the dice!";
+}
+console.log(diceRoll);
+
 
 // 14 - Create a variable called `petStatus`. 
 //      Write a conditional that covers the following:
 //      if the value of `pets` is less than the value of `allowedPets`,
 //      set `petStatus` to the value of "I can have more pets" 
+
 //      if the value of `pets` is equal to the value of `allowedPets`,
 //      set `petStatus` to the value of "I have enough pets" 
+
 //      if the value of `pets` is greater than the value of `allowedPets`.
 //      set `petStatus` to the value of "Oh no, I have too many pets!"
+
+
+let petStatus;
+if (pets < allowedPets) {
+  petStatus = "I can have more pets";
+}else if (pets === allowedPets) {
+  petStatus = "I have enough pets";
+}else {
+  petStatus = "Oh no, I have too many pets!";
+}
+
 
 
 // STRETCH GOALS:
@@ -66,6 +98,18 @@ let friendsPets = 5;
 //      be sure to think through all the scenarios. 
 //      console.log `mostPets` after the conditional has run.
 
+let mostPets;
+if (pets > friendsPets) {
+  mostPets = pets;
+}else if (friendsPets > pets){
+  mostPets = friendsPets;
+}else {
+  mostPets = pets;
+}
+
+console.log(mostPets);
+
+
 // 16 - Make a variable called `luckyResult`
 //      Write a *switch* statement that sets `luckyResult` to:
 //      "First is the worst" if your lucky number is 1
@@ -75,14 +119,53 @@ let friendsPets = 5;
 //      You'll need to research how to use switch statements!
 //      console.log `luckyResult` after the conditional has run.
 
+//Notes:
+//switch statement -> is part of JavaScript's conditional Statements, which are used to perform different actions based on different conditions.
+//-way to check a variable against many different values and run specific code for each match.
+//-Similar to using multiple if...else if statement but cleaner
+//Reference: https://www.w3schools.com/js/js_switch.asp & https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
+//added to topics to review & study.
+//"case" - used to specify a value that the switch variable might be equal to.
+//order of case block does not affect how the switch statement works.
+
+
+//Attempted solution:
+
+let luckyResult;
+//luckyNumber = 11; as setup above challange #4 (this could be used to test different cases)
+
+switch (luckyNumber) {
+  case 1:
+    luckyResult = 'First is the worst';
+    break;
+  case 2:
+    luckyResult = 'Second is the bes';
+    break;
+  case 3:
+    luckyResult = 'Third is the one with the polka do dress';
+    break;
+  default:
+    luckyResult = 'Luck is what happens when preparation meets opportunity';
+}
+
+console.log(luckyResult2);
+
+
+
 // 17 -- Rewrite question 12 with a `ternary` operator. You'll need to do research!
 
+//Notes:
+// ternary operator - a concise way to write conditional expression
+// shorthand way of writing if-els statment.
+// consist of 3 parts -> condition, result if true, result if false
+//syntax: condition ? resultIfTrue : resultIfFalse;
 
+let result2 = adventurous === true ? 'Adventures are great!' : 'How about we stay home?';
+console.log(result2);
 
-
-
-
-
+//more review needed on this topic: added to topics to review
+// areas that needs deeper study: [conditionals, switch statements, ternary operators]
+//---------------------------------------------------------------------------------------------------------------------------------------
 
 
 
